@@ -28,9 +28,7 @@ li {
     
 
   .btn {
-    position: absolute;
-    top: 20px;
-    left: 250px;
+    position: relative;
     height: 50px;
     width: 50px;
     border-radius: 50%;
