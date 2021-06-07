@@ -30,8 +30,7 @@ li {
   .btn {
     position: relative;
     height: 50px;
-    width: 50px;
-    border-radius: 50%;
+    width: 150px;
     border: none;
     color: var(--btnFontColor);
     background-color: var(--btnBg);
@@ -40,7 +39,7 @@ li {
   .btn:focus { outline-style: none; }
 
   .light-theme {
-    --bg: var(--green);
+    --bg: var(--white);
     --fontColor: var(--black);
     --btnBg: var(--black);
     --btnFontColor: var(--white);
@@ -48,7 +47,7 @@ li {
   
   .dark-theme {
     --bg: var(--black);
-    --fontColor: var(--green);
+    --fontColor: var(--white);
     --btnBg: var(--white);
     --btnFontColor: var(--black);
   }
