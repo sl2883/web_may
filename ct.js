@@ -11,3 +11,12 @@ clevertap.privacy.push({useIP: false}); //set the flag to true, if the user agre
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wzrk, s);
 })();
+
+clevertap.notifications.push({
+        "apnsWebPushId":"<apple web push id>", //only for safari browser
+        "apnsWebPushServiceUrl":"<safari package service url>",//only for safari browser
+        "titleText":'Would you like to receive Push Notifications?',
+        "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+        "okButtonText":'Sign me up!',
+        "rejectButtonText":'No thanks',
+        "okButtonColor":'#f28046'});

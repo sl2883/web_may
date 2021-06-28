@@ -5,6 +5,7 @@
 const login1 = document.querySelector('#login1');
 const login2 = document.querySelector('#login2');
 const login3 = document.querySelector('#login3');
+const logout = document.querySelector('#logout');
 const event1 = document.querySelector('#event1');
 const eventdiscarded = document.querySelector('#eventDiscarded');
 const eventWithPropertyDiscarded = document.querySelector('#eventWithPropertyDiscarded');
@@ -47,6 +48,10 @@ login3.addEventListener('click', function() {
       "MSG-whatsapp": true,              // Enable WhatsApp notifications
     }
    });
+})
+
+logout.addEventListener('click', function() {
+  clevertap.clear();
 })
 
 event1.addEventListener('click', function() {
