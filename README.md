@@ -62,6 +62,7 @@ Here's an example payload -
 
 
 **Google Tag Manager Setup**
+- Check [this](https://github.com/sl2883/web_may/blob/main/Frame%201.png)
 - From the Google Tag Manager account, get the code to be pasted 
 
 Paste this code as high in the <head> of the page as possible:
