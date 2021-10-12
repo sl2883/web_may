@@ -1,0 +1,49 @@
+[
+    {
+      "ddnd": 1,
+      "l_ts": 0,
+      "f_ts": 0,
+      "g": "-v85d9db128bb24974b5f5b7d60137cda6",
+      "id": "86Z-ZZZ-K95Z",
+      "imp": 0,
+      "tk": "111-16b",
+      "frs": true,
+      "tlc": [],
+      "regURLs": [
+        "asteroom"
+      ],
+      "type": "meta",
+      "af": {
+        "Make": "Apple",
+        "lib": "Segment-iOS",
+        "wdt": "2.54",
+        "OS Version": "14.6",
+        "Version": "3.9.7",
+        "Build": "1002",
+        "Model": "iPhone9,4",
+        "ifv": "85d9db128bb24974b5f5b7d60137cda6",
+        "ifaA": false,
+        "cc": "us",
+        "SDK Version": "30904",
+        "useIP": false,
+        "OS": "iOS",
+        "hgt": "4.52",
+        "Carrier": "AT&T"
+      }
+    },
+    {
+      "pai": "com.penpower.asteroom",
+      "n": "LFCPolicy",
+      "evtName": "wzrk_fetch",
+      "dsync": true,
+      "pg": 1,
+      "evtData": {
+        "t": 1
+      },
+      "ep": 1629481228,
+      "type": "event",
+      "lsl": 0,
+      "s": 1629481228,
+      "f": true
+    }
+  ]

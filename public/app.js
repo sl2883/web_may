@@ -13,29 +13,71 @@ const profileUpdate = document.querySelector('#profileUpdate');
 
 login1.addEventListener('click', function() {
   clevertap.onUserLogin.push({
-    "Site": {
-      "Name": "SL Web May20 1",            // String
-      "Email": "slwebmay201@gmail.com",         // Email address of the user
-      "MSG-email": false,                // Disable email notifications
-      "MSG-push": true,                  // Enable push notifications
-      "MSG-sms": true,                   // Enable sms notifications
-      "MSG-whatsapp": true,              // Enable WhatsApp notifications
+    "Site": {          // String
+        "Email": "sunnyvaloraenabled@gmail.com",
+        "MSG-email": true
     }
    });
+
+   clevertap.notifications.push({
+    "titleText":'Would you like to receive Push Notifications?',
+    "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+    "okButtonText":'Sign me up!',
+    "rejectButtonText":'No thanks',
+    "askAgainTimeInSeconds":5,
+    "okButtonColor":'#f28046'});
 })
+
+// login1.addEventListener('click', function() {
+//   clevertap.onUserLogin.push({
+//     "Site": {
+//       "Name": "SL Web May20 1",            // String
+//       "Email": "slwebmay201@gmail.com",         // Email address of the user
+//       "MSG-email": false,                // Disable email notifications
+//       "MSG-push": true,                  // Enable push notifications
+//       "MSG-sms": true,                   // Enable sms notifications
+//       "MSG-whatsapp": true
+//     }
+//    });
+// })
+
+
+
+
 
 login2.addEventListener('click', function() {
   clevertap.onUserLogin.push({
     "Site": {
-      "Name": "SL Web May20 2",            // String
-      "Email": "slwebmay202@gmail.com",         // Email address of the user
-      "MSG-email": true,                // Disable email notifications
-      "MSG-push": true,                  // Enable push notifications
-      "MSG-sms": true,                   // Enable sms notifications
-      "MSG-whatsapp": true,              // Enable WhatsApp notifications
-    }
+      "Name": "Sunny undosWebTokenTest2",            // String
+      "Email": "undosWebTokenTest2@gmail.com",
+      "Identity": "undosWebTokenTest2"
+  }
    });
+
+   clevertap.notifications.push({
+    "titleText":'Would you like to receive Push Notifications?',
+    "bodyText":'We promise to only send you relevant content and give you updates on your transactions',
+    "okButtonText":'Sign me up!',
+    "rejectButtonText":'No thanks',
+    "askAgainTimeInSeconds":5,
+    "okButtonColor":'#f28046'});
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 login3.addEventListener('click', function() {
   clevertap.onUserLogin.push({
@@ -45,7 +87,10 @@ login3.addEventListener('click', function() {
       "MSG-email": true,                // Disable email notifications
       "MSG-push": true,                  // Enable push notifications
       "MSG-sms": true,                   // Enable sms notifications
-      "MSG-whatsapp": true,              // Enable WhatsApp notifications
+      "MSG-whatsapp": true,              // Enable WhatsApp notifications,
+      "category-resubscribe": {
+        "email": ["information"]
+      },
     }
    });
 })
@@ -55,7 +100,7 @@ logout.addEventListener('click', function() {
 })
 
 event1.addEventListener('click', function() {
-  clevertap.event.push("Product Clicked", {
+  clevertap.event.push("Product viewed", {
     "Product name":"DIAMOND",
     "Category":"Mens Accessories",
     "page": "main",
@@ -86,7 +131,8 @@ eventWithPropertyDiscarded.addEventListener('click', function() {
 profileUpdate.addEventListener('click', function() {
   clevertap.profile.push({
     "Site": {
-      "Today's Date": new Date(),            // String
+      "first name": "Sunny3",
+      "last name": "Ladkani"
     }
    });
 })

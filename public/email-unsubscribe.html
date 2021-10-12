@@ -70,6 +70,7 @@
      // This function is used to send groups updation request. User can directly call
      // `$WZRK_WR.changeSubscriptionGroups(isReencode, updatedGroups)` by passing updated groups in format specified.
         function changeSubscriptionGroups(){
+        let unsubcount = 0;
          let unsubcribeGroups = [];
              var elements = document.getElementsByClassName(
                  "ct-unsub-group-input-item");
@@ -78,8 +79,23 @@
                  if(element.name) {
                      var data = {name: element.name, isUnsubscribed: element.checked}
                      unsubcribeGroups.push(data)
+
+                     if(element.checked) {
+                         unsubcount++;
+                     }
+
                  }
              }
+
+             if(unsubcount == unsubcribeGroups.length) {
+                 alert("un sub all");
+                 $WZRK_WR.unSubEmail();
+             }
+             else {
+                alert("sub back");
+                 $WZRK_WR.subEmail();
+             }
+
              $WZRK_WR.changeSubscriptionGroups(false, unsubcribeGroups);
           } 
          // will be called after the subscription preferences for the user have been updated

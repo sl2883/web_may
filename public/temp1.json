@@ -1,0 +1,48 @@
+[
+  {
+    "ddnd": 1,
+    "g": "-vaf8151fb9540426ebd0de348b3eed30b",
+    "af": {
+      "Make": "Apple",
+      "lib": "Segment-iOS",
+      "wdt": "2.54",
+      "OS Version": "14.6",
+      "Version": "1.0",
+      "Build": "1",
+      "Model": "iPhone9,4",
+      "Radio": "LTE",
+      "ifv": "af8151fb9540426ebd0de348b3eed30b",
+      "ifaA": false,
+      "wifi": true,
+      "cc": "us",
+      "SDK Version": "30904",
+      "useIP": true,
+      "OS": "iOS",
+      "hgt": "4.52",
+      "Carrier": "AT&T"
+    },
+    "id": "TEST-779-684-5Z6Z",
+    "tk": "TEST-4b6-caa",
+    "frs": true,
+    "imp": 0,
+    "f_ts": 0,
+    "type": "meta",
+    "l_ts": 0,
+    "tlc": []
+  },
+  {
+    "pai": "com.sunny.ctios.AsteroomTest",
+    "n": "Unknown",
+    "evtName": "wzrk_fetch",
+    "dsync": true,
+    "pg": 1,
+    "evtData": {
+      "t": 1
+    },
+    "ep": 1629480266,
+    "type": "event",
+    "lsl": 0,
+    "s": 1629480266,
+    "f": true
+  }
+]
