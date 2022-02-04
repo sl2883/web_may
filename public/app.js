@@ -14,10 +14,16 @@ const profileUpdate = document.querySelector('#profileUpdate');
 login1.addEventListener('click', function() {
   clevertap.onUserLogin.push({
     "Site": {          // String
-        "Email": "sunnyvaloraenabled@gmail.com",
-        "MSG-email": true
+        "identity": "User MSG-Whatsapp 59",  // guid => 3240923u42305u
+        "checking_new_prop": "sunny"
     }
    });
+
+   //timing 15 second =>
+
+   clevertap.event.push({
+     "event": "login"
+   })
 
    clevertap.notifications.push({
     "titleText":'Would you like to receive Push Notifications?',
@@ -43,7 +49,29 @@ login1.addEventListener('click', function() {
 
 
 
+function myFunction(e) {
+  //form.action = "register.html";
+  const formElem = document.querySelector('form');
+  const formData = new FormData(formElem);
 
+  console.log(formData.get('name')); // foo
+  console.log(formData.get('email')); // foo
+  console.log(formData.get('phone')); // foo
+
+  //console.log(formData.get('field2')); // bar
+
+  alert(formData.get('name') + " " + formData.get('email') + " " + formData.get('phone') + " ");
+
+  clevertap.onUserLogin.push({
+    "Site": {
+        "Name": formData.get('name'),            // String
+        "Email": formData.get('email'),
+        "Phone": formData.get('phone')
+    }
+   });
+
+  return false;
+}
 
 login2.addEventListener('click', function() {
   clevertap.onUserLogin.push({
@@ -100,7 +128,12 @@ logout.addEventListener('click', function() {
 })
 
 event1.addEventListener('click', function() {
-  clevertap.event.push("Product viewed", {
+  clevertap.event.push("Product viewed test1", {
+    "Product name 1":"DIAMOND",
+    "NEw property":"r534"
+  });
+
+  clevertap.event.push("Discarded", {
     "Product name":"DIAMOND",
     "Category":"Mens Accessories",
     "page": "main",
