@@ -1,0 +1,177 @@
+{
+    "next_cursor": "MzU8Lh8dVVs5P39mMzU8Lh8dVVs5P39mMzU8Lh8dAUhmbGN%2BY2JkcgUHTVEIa2R%2FY25mfAEDBA1haC56YW5mfwYHAgdiY2R5K2gue04CAQZlamN6YyZ%2Fek4ATQZnaGB7ZmtmNx8BTQVnbH9mMzU8Lh8dVVs5P39mMzU8Lh8dVVs5P39mMzU8Lh8dVVs5P39mMzU8Lh8dVVs5P39mMzU8Lh8dVVs5P39mMzU8Lh8dVVs5P39mMzU8Lh8dVVs5P39mMzU8Lh8dAUhmbGN%2BY2JkcgUHTVEIa2R%2FY25mfAEDBA1haC56YW5mfwYHAgdiY2R5K2gue04CAQZlamN6YyZ%2Fek4ATQZnaGB7ZWpgNx8BTQR6dzYkOT9%2FZg%3D%3D",
+    "records": [
+        {
+            "profile": {
+                "df": {
+                    "2": 440,
+                    "1": 117,
+                    "0": 62
+                },
+                "all_identities": [
+                    "98767"
+                ],
+                "identity": "98767",
+                "profileData": {
+                    "custom": 1.3
+                },
+                "events": {
+                    "App Launched": {
+                        "count": 4,
+                        "first_seen": 1642186239,
+                        "last_seen": 1642186791
+                    },
+                    "Notification Viewed": {
+                        "count": 9,
+                        "first_seen": 1642185973,
+                        "last_seen": 1642186798
+                    },
+                    "Identity Set": {
+                        "count": 1,
+                        "first_seen": 1642185979,
+                        "last_seen": 1642185979
+                    },
+                    "State Transitioned": {
+                        "count": 1,
+                        "first_seen": 1642233540,
+                        "last_seen": 1642233540
+                    }
+                },
+                "os_version": "9",
+                "app_version": "1.0.0",
+                "make": "google",
+                "model": "AOSP on IA Emulator",
+                "platform": "Android",
+                "objectId": "__79ec2151cf3549d6ad92397171f8eb2d"
+            },
+            "session_props": {
+                "session_source": "Direct"
+            },
+            "ts": 20220114105039,
+            "event_props": {
+                "CT SDK Version": 40002,
+                "CT Session Id": 1642186239,
+                "CT App Version": "1.0.0",
+                "CT OS Version": "9",
+                "CT Network Carrier": "Android",
+                "CT Source": "Mobile"
+            }
+        },
+        {
+            "profile": {
+                "df": {
+                    "2": 440,
+                    "1": 117,
+                    "0": 62
+                },
+                "all_identities": [
+                    "98767"
+                ],
+                "identity": "98767",
+                "profileData": {
+                    "custom": 1.3
+                },
+                "events": {
+                    "App Launched": {
+                        "count": 4,
+                        "first_seen": 1642186239,
+                        "last_seen": 1642186791
+                    },
+                    "Notification Viewed": {
+                        "count": 9,
+                        "first_seen": 1642185973,
+                        "last_seen": 1642186798
+                    },
+                    "Identity Set": {
+                        "count": 1,
+                        "first_seen": 1642185979,
+                        "last_seen": 1642185979
+                    },
+                    "State Transitioned": {
+                        "count": 1,
+                        "first_seen": 1642233540,
+                        "last_seen": 1642233540
+                    }
+                },
+                "os_version": "9",
+                "app_version": "1.0.0",
+                "make": "google",
+                "model": "AOSP on IA Emulator",
+                "platform": "Android",
+                "objectId": "__79ec2151cf3549d6ad92397171f8eb2d"
+            },
+            "session_props": {
+                "session_source": "Direct"
+            },
+            "ts": 20220114105442,
+            "event_props": {
+                "CT SDK Version": 40002,
+                "CT Session Id": 1642186482,
+                "CT App Version": "1.0.0",
+                "CT OS Version": "9",
+                "CT Network Carrier": "Android",
+                "CT Source": "Mobile"
+            }
+        },
+        {
+            "profile": {
+                "df": {
+                    "2": 440,
+                    "1": 117,
+                    "0": 62
+                },
+                "all_identities": [
+                    "nov4-5sec-id-118",
+                    "nov4-5sec-id-118@test.com"
+                ],
+                "identity": "nov4-5sec-id-118",
+                "events": {
+                    "UTM Visited": {
+                        "count": 1,
+                        "first_seen": 1642185966,
+                        "last_seen": 1642185966
+                    },
+                    "App Launched": {
+                        "count": 1,
+                        "first_seen": 1642185966,
+                        "last_seen": 1642185966
+                    },
+                    "Notification Viewed": {
+                        "count": 1,
+                        "first_seen": 1642185970,
+                        "last_seen": 1642185970
+                    },
+                    "App Installed": {
+                        "count": 1,
+                        "first_seen": 1642185966,
+                        "last_seen": 1642185966
+                    },
+                    "State Transitioned": {
+                        "count": 1,
+                        "first_seen": 1642233540,
+                        "last_seen": 1642233540
+                    }
+                },
+                "os_version": "9",
+                "app_version": "1.0.0",
+                "make": "google",
+                "model": "AOSP on IA Emulator",
+                "platform": "Android",
+                "objectId": "__79ec2151cf3549d6ad92397171f8eb2d"
+            },
+            "session_props": {
+                "session_source": "Direct"
+            },
+            "ts": 20220114104606,
+            "event_props": {
+                "CT SDK Version": 40002,
+                "CT Session Id": 1642185966,
+                "CT App Version": "1.0.0",
+                "CT OS Version": "9",
+                "CT Network Carrier": "Android",
+                "CT Source": "Mobile"
+            }
+        }
+    ],
+    "status": "success"
+}

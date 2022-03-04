@@ -10,19 +10,32 @@ const event1 = document.querySelector('#event1');
 const eventdiscarded = document.querySelector('#eventDiscarded');
 const eventWithPropertyDiscarded = document.querySelector('#eventWithPropertyDiscarded');
 const profileUpdate = document.querySelector('#profileUpdate');
+const webPButton = document.querySelector('#webPButton');
+const webpopupspace = document.querySelector('#webpopupspace');
+
+clevertap.notificationCallback = function(msg){
+  // Raise the notification viewed and clicked events in the callback
+  
+  console.log(JSON.stringify(msg));// Your custom rendering implementation here
+  clevertap.raiseNotificationViewed();
+  webpopupspace.innerHTML = msg.msgContent.html;
+  const webP = document.querySelector('#webP');
+  webP.addEventListener('click', function() {
+     clevertap.raiseNotificationClicked();
+   });
+};
 
 login1.addEventListener('click', function() {
   clevertap.onUserLogin.push({
     "Site": {          // String
-        "identity": "User MSG-Whatsapp 59",  // guid => 3240923u42305u
-        "checking_new_prop": "sunny"
+        "Email": "test-3ff8c6@test.mailgenius.com",  // guid => 3240923u42305u
     }
    });
 
    //timing 15 second =>
 
    clevertap.event.push({
-     "event": "login"
+     "event": "Sign up"
    })
 
    clevertap.notifications.push({
@@ -111,7 +124,8 @@ login3.addEventListener('click', function() {
   clevertap.onUserLogin.push({
     "Site": {
       "Name": "sunny gmail",            // String
-      "Email": "sunny.ladkani@gmail.com",         // Email address of the user
+      "Email": "sunny.ladkani@gmail.com",  
+      "Identity": "32409",              // Email address of the user
       "MSG-email": true,                // Disable email notifications
       "MSG-push": true,                  // Enable push notifications
       "MSG-sms": true,                   // Enable sms notifications
@@ -153,13 +167,22 @@ eventDiscarded.addEventListener('click', function() {
 })
 
 eventWithPropertyDiscarded.addEventListener('click', function() {
-  clevertap.event.push("Property Discarded", {
+  clevertap.event.push("Order New 3242", {
     "Product name":"DIAMOND",
     "Category":"Mens Accessories",
     "page": "main",
     "Price":59.99,
   });
 })
+
+// eventWithPropertyDiscarded.addEventListener('click', function() {
+//   clevertap.event.push("Property Discarded", {
+//     "Product name":"DIAMOND",
+//     "Category":"Mens Accessories",
+//     "page": "main",
+//     "Price":59.99,
+//   });
+// })
 
 profileUpdate.addEventListener('click', function() {
   clevertap.profile.push({
@@ -168,4 +191,13 @@ profileUpdate.addEventListener('click', function() {
       "last name": "Ladkani"
     }
    });
+})
+
+webPButton.addEventListener('click', function() {
+  clevertap.event.push("WebPopup event", {
+    "Product name":"DIAMOND",
+    "Category":"Mens Accessories",
+    "page": "main",
+    "Price":59.99,
+  });
 })
