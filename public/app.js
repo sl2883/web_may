@@ -13,17 +13,18 @@ const profileUpdate = document.querySelector('#profileUpdate');
 const webPButton = document.querySelector('#webPButton');
 const webpopupspace = document.querySelector('#webpopupspace');
 
-clevertap.notificationCallback = function(msg){
-  // Raise the notification viewed and clicked events in the callback
+// clevertap.notificationCallback = function(msg){
+//   // Raise the notification viewed and clicked events in the callback
   
-  console.log(JSON.stringify(msg));// Your custom rendering implementation here
-  clevertap.raiseNotificationViewed();
-  webpopupspace.innerHTML = msg.msgContent.html;
-  const webP = document.querySelector('#webP');
-  webP.addEventListener('click', function() {
-     clevertap.raiseNotificationClicked();
-   });
-};
+//   console.log(JSON.stringify(msg));// Your custom rendering implementation here
+//   clevertap.raiseNotificationViewed();
+//   webpopupspace.innerHTML = msg.msgContent.html;
+//   const webP = document.querySelector('#webP');
+//   webP.addEventListener('click', function() {
+//     //window.parent.clevertap.raisePopupNotificationClicked({"msgId":"12345"})
+//      clevertap.raiseNotificationClicked();
+//    });
+// };
 
 login1.addEventListener('click', function() {
   clevertap.onUserLogin.push({

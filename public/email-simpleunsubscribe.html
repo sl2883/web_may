@@ -1,0 +1,75 @@
+
+<html>
+
+        <head>
+            <script src="ct.js"></script>
+            <title>Unsubscribe from email</title>
+        
+            <!-- your WizRocket JS embed code goes here -->
+        
+        
+        </head>
+        
+        <body>
+        
+        
+            <div>
+                <h4>I want to unsubscribe from future emails</h4>
+                <input type="text" id="email" readonly="readonly" />
+                <br/><br/>
+                <button onclick="unsubscribe()">Unsubscribe me</button><br/><br/>
+                <!-- button onclick="resubscribe()">Resubscribe</button -->
+            </div>
+        
+        
+        
+            <script>
+                // on  page load, fetch the email id of the user.
+                window.onload = function() {
+                    $WZRK_WR.getEmail();
+                };
+        
+                // will be called after the email id of the user has been fetched
+                function wzrk_email_fetched(emailStr) {
+                    document.getElementById("email").value = emailStr;
+                }
+        
+                // will be called after the subscription preferences for the user have been updated
+                function wzrk_email_subscription(status) {
+                    //status 0 : unsubscribed, status 1 : subscribed
+                    // todo - you can show a success message to the user from here
+                    var statusLabel = 'subscribed';
+                    if (status == 0) {
+                        statusLabel = 'unsubscribed';
+                    }
+                    alert("You've been " + statusLabel);
+        
+                }
+        
+                // call this function to unsubscribe the user
+                function unsubscribe() {
+                    $WZRK_WR.unSubEmail();
+
+                    var email = document.getElementById("email").value;
+                    clevertap.onUserLogin.push({
+                        "Site": {           // String
+                        "Identity": email
+                    }
+                    });
+
+                    clevertap.event.push("Reason for unsubscribe", {
+                        "Title":"Unknown",
+                        "Description":"no further usage"
+                    });
+
+                }
+        
+                // call this function to resubscribe the user
+                function resubscribe() {
+                    $WZRK_WR.subEmail();
+                }
+            </script>
+        
+        </body>
+        
+        </html>

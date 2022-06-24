@@ -97,6 +97,7 @@ event6.addEventListener('click', function() {
     "Category":"Mens Accessories",
     "page": "events",
     "Price":59.99,
+    "Date Added": new Date("05-02-2022 10:15:20")
   });
 })
 
