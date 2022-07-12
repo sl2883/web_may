@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script>
+      function recordButton() {
+          //ios
+          //Recording a User Event called Product Viewed in JS enabled custom in-apps.
+            // var props = {foo: 'xyz', lang: 'French'};
+            // var message = { action:'recordEventWithProps', event:'Product Viewed', props: props};
+
+            // if(window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.clevertap){
+            // // Call iOS interface                  
+            //     window.webkit.messageHandlers.clevertap.postMessage(message);         
+            // } 
+
+            //Recording a User Event called Product Viewed with properties, in JS enabled custom In-Apps
+            var props = {foo: 'xyz1', lang: 'French1'};
+            if (window.CleverTap) {
+            // Call Android interface             
+            CleverTap.pushEvent("Product Viewed",JSON.stringify(props));
+                    }
+
+      }
+  </script>
+	<title></title>
+</head>
+<body>
+<p>This is a test</p>
+<button onclick="recordButton()">Click me</button>
+</body>
+</html>
