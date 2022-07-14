@@ -1,0 +1,179 @@
+
+<html>
+
+        <head>
+                <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i&display=swap" rel="stylesheet" crossorigin>
+                <link rel="stylesheet" href="/template-resources/css/reset.css" />
+            
+                <title>Descadastro | Wine</title>
+                <meta name="title" content="Descadastro | Wine" />
+                <meta name="description" content="" />
+                <meta name="robots" content="index, follow">
+                <meta charset="UTF-8">
+                <meta http-equiv="x-ua-compatible" content="ie=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+            
+                <!--Facebook cards:-->
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Descadastro | Wine" />
+                <meta property="og:image" content="https://www.wine.com.br/institucional/descadastro-wine/img/capa.png" />
+                <meta property="og:site_name" content="Wine" />
+                <meta property="og:url" content="https://www.wine.com.br/institucional/descadastro-wine/" />
+                <meta property="og:description" content="" />
+                <!--:Facebook cards-->
+            
+                <!--Twitter cards:-->
+                <meta name="twitter:card" content="summary_large_image">
+                <meta name="twitter:site" content="@wine_vinhos">
+                <meta name="twitter:title" content="Descadastro | Wine">
+                <meta name="twitter:description" content="">
+                <meta name="twitter:image:src" content="https://www.wine.com.br/institucional/descadastro-wine/img/capa.png">
+                <meta name="twitter:url" content="https://www.wine.com.br/institucional/descadastro-wine/">
+                <meta name="twitter:domain" content="www.wine.com.br">
+                <meta name="twitter:creator" content="@wine_vinhos">
+                <!--:Twitter cards-->
+            
+                <link rel="stylesheet" type="text/css" media="screen" href="./build/css/style.css?v=2" />
+                <link rel="stylesheet" href="https://use.typekit.net/vxm5ili.css">
+            
+                <script src="ct.js"></script>
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+                <script type="text/javascript" src="./build/js/main.js?v=1"></script>
+
+            <title>Unsubscribe from email</title>
+        
+            <!-- your WizRocket JS embed code goes here -->
+        
+        
+        </head>
+        
+        <body>
+        
+        
+            <div>
+                <input type="hidden" type="text" id="email" readonly="readonly" />
+                <!-- button onclick="resubscribe()">Resubscribe</button -->
+            </div>
+        
+        
+        <section id="hotsite" class="landing-page">
+
+		<!-- CONTEUDO DA PAGINA -->
+
+                <section id="modulo1">
+                    <div class="grupo">
+                        <a href="https://www.wine.com.br/" class="logo-wine">
+                            <img src="./img/logo-wine.svg">
+                        </a>
+
+                        <div class="first-act">
+                            <p class="tx1">Você pode nos contar o motivo do cancelamento de sua inscrição?</p>
+
+                            <p class="tx2">Sua colaboração é importante para oferecermos sempre o melhor e para ter você de volta conosco.</p>
+
+                            <div id="form-questions">
+                                <div class="form-group">
+                                    <!-- <input type="hidden" id="email"  readonly="readonly"> -->
+
+                                    <label class="caixa firstlabel">Eu recebo muitos e-mails em geral
+                                        <input type="radio" class="inputResposta" id="answer01" value="Eu recebo muitos e-mails em geral" name="radio_answer">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="caixa">A frequência de recebimento de mensagens é muito alta
+                                        <input type="radio" class="inputResposta" id="answer02" value="A frequência de recebimento de mensagens é muito alta" name="radio_answer">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="caixa">Não tenho tempo suficiente para ler os e-mails
+                                        <input type="radio" class="inputResposta" id="answer03" value="Não tenho tempo suficiente para ler os e-mails" name="radio_answer">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="caixa">O website não permite que eu faça aquilo que eu desejo
+                                        <input type="radio" class="inputResposta" id="answer04" value="O website não permite que eu faça aquilo que eu desejo" name="radio_answer">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                    <label class="caixa">Outros...
+                                        <input type="radio" class="inputResposta" id="answer05" value="Outros..." name="radio_answer">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+
+                                <button id="sendBtn" onclick="unsubscribe()" value="Desinscreva-me">Desinscreva-me</button>
+                            </div>
+                        </div>
+
+                        <div class="feedback" style="display: none;">
+                            <p class="tx3">O cancelamento de sua inscrição foi realizado com sucesso.</p>
+
+                            <img src="./img/check.svg" class="check">
+
+                            <img src="./img/tacas.svg" class="tacas">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FIM CONTEUDO DA PAGINA -->
+
+            </section>
+    
+            <script>
+                let answerQuestion = '';
+                
+                // on  page load, fetch the email id of the user.
+                window.onload = function() {
+                    $WZRK_WR.getEmail();
+                };
+        
+                // will be called after the email id of the user has been fetched
+                function wzrk_email_fetched(emailStr) {
+                    document.getElementById("email").value = emailStr;
+                }
+        
+                // will be called after the subscription preferences for the user have been updated
+                function wzrk_email_subscription(status) {
+                    //status 0 : unsubscribed, status 1 : subscribed
+                    // todo - you can show a success message to the user from here
+                    var statusLabel = 'subscribed';
+                    if (status == 0) {
+                        statusLabel = 'unsubscribed';
+                    }
+                    //alert("You've been " + statusLabel);
+        
+                }
+        
+                // call this function to unsubscribe the user
+                function unsubscribe() {
+                    $WZRK_WR.unSubEmail();
+
+                    var email = document.getElementById("email").value;
+                    clevertap.onUserLogin.push({
+                        "Site": {           // String
+                        "Identity": email
+                    }
+                    });
+
+                    clevertap.event.push("Questions", {
+                        "resposta": answerQuestion
+                    });
+
+                    $('#modulo1 .first-act').hide();
+                    $('#modulo1 .feedback').show();
+
+                }
+        
+                // call this function to resubscribe the user
+                function resubscribe() {
+                    $WZRK_WR.subEmail();
+                }
+
+                $('.inputResposta').change(function() {
+                    // answerQuestion = $(this.value + ':checked').val();
+                    answerQuestion = $(this).val();
+                });
+        
+            </script>
+        
+        </body>
+        
+        </html>
